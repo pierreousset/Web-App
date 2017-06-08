@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <% include ../home/head %>
+        <title>
+            <%= titlepara %>
+        </title>
+</head>
+
+<body style="margin: 0;padding-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;" id="polo">
+
+    <!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title" style="background-color: crimson; color: white;" id="barre_de_navigation"><%= title %></span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="/"><i class="material-icons">&#xE156;</i> &nbsp; Boite de réception</a>
+                <a class="mdl-navigation__link" href="/aujourd_hui"><i class="material-icons">&#xE8DF;</i> &nbsp; Aujourd'hui</a>
+                <a class="mdl-navigation__link" href=""><i class="material-icons">&#xE893;</i> &nbsp; étiquettes</a>
+                <a class="mdl-navigation__link" href="/parametre"><i class="material-icons">&#xE8B8;</i> &nbsp; Paramètres</a>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored show-modal" style="background-color: #4CAF50; position: absolute; bottom: 0px; width: 100%">Connexion</button>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content" style="background-color: crimson;" id="barre_couleur">
+            <dialog class="mdl-dialog">
+
+                <div class="panel">
+                    <ul id="myTab1" class="nav nav-tabs nav-justified">
+                        <li class="active"><a href="#home1" data-toggle="tab">Connexion</a></li>
+                        <li class=""><a href="#profile1" data-toggle="tab">Incription</a></li>
+                    </ul>
+
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in" id="home1">
+                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab buttonnn close">
+                            <i class="material-icons">close</i>
+                        </button>
+                            <div class="mdl-dialog__content">
+                                <p style="margin-top: 5px">
+                                    Connexion
+                                </p>
+                            </div>
+                            <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+                                <form action="/connexion">
+                                    <div class="mdl-textfield mdl-js-textfield" style="margin: auto">
+                                        <input class="mdl-textfield__input" type="text" id="fname">
+                                        <label class="mdl-textfield__label" for="fname" name="email">email</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield" style="margin: auto">
+                                        <input class="mdl-textfield__input" type="text" id="fname">
+                                        <label class="mdl-textfield__label" for="fname" type="password" name="password">Password</label>
+                                    </div>
+                                    <button type="submit" class="mdl-button">Connexion</button>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade" id="profile1">
+                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab buttonnn close">
+                            <i class="material-icons">close</i>
+                        </button>
+                            <div class="mdl-dialog__content">
+                                <p>
+                                    Inscription
+                                </p>
+                            </div>
+                            <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+                                <form action="/connexion">
+                                    <div class="mdl-textfield mdl-js-textfield" style="margin: auto">
+                                        <input class="mdl-textfield__input" type="text" id="fname">
+                                        <label class="mdl-textfield__label" for="fname" name="email">email</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield" style="margin: auto">
+                                        <input class="mdl-textfield__input" type="text" id="fname">
+                                        <label class="mdl-textfield__label" for="fname" type="password" name="password">Password</label>
+                                    </div>
+                                    <button type="submit" class="mdl-button">Inscription</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+            <div class="page-content">
+                <%- include('para'); %>
+            </div>
+        </main>
+    </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+<script>
+</script>
+
+</html>

@@ -1,0 +1,188 @@
+<!-- views/para/para.ejs -->
+<div style="margin-top: 1cm;"></div>
+<style>
+    .demo-list-control {
+        width: 10cm;
+    }
+    
+    .demo-list-radio {
+        display: inline;
+    }
+    
+    .demo-card-square.mdl-card {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .demo-card-square>.mdl-card__title {
+        color: #fff;
+        background: url('') bottom right 15% no-repeat #46B6AC;
+    }
+    
+    demo-card-wide.mdl-card {
+        width: 512px;
+    }
+    
+    .demo-card-wide>.mdl-card__title {
+        color: #fff;
+        height: 176px;
+        background: url('') center / cover;
+    }
+    
+    .demo-card-wide>.mdl-card__menu {
+        color: #fff;
+    }
+</style>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="demo-card-square mdl-card mdl-shadow--2dp" style="margin: auto">
+            <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text">Naudy Guillaume</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Derniere connexion le : 12/13
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Mode Premium
+    </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col">
+        <ul class="demo-list-control mdl-list" style="background-color: white;">
+
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons  mdl-list__item-avatar">color_lens</i>
+                    Fonds random
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+                        <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" checked />
+                    </label>
+                </span>
+            </li>
+
+            <li class="mdl-list__item">
+                <button class="mdl-button couleur">
+                    <span class="mdl-list__item-primary-content couleur">
+                        <i class="material-icons  mdl-list__item-avatar">colorize</i>
+                        Couleurs fonds
+                    </span>
+                </button>
+            </li>
+
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="material-icons  mdl-list__item-avatar">brightness_6</i>
+                    Mode nuit
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="list-switch-1">
+                        <input type="checkbox" id="list-switch-1" class="mdl-switch__input" checked />
+                    </label>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col"></div>
+
+    <dialog class="mdl-dialog mdl_3 changecouleur">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab buttonnn closess">
+                    <i class="material-icons">close</i>
+                </button>
+        <div class="mdl-dialog__content">
+            <h3>
+                Ajout
+            </h3>
+        </div>
+        <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+            <form action="">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#00FFFF');" style="background-color: #00FFFF"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#8A2BE2');" style="background-color: #8A2BE2"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#A52A2A');" style="background-color: #A52A2A"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#006400');" style="background-color: #006400"></a>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#FFD700');" style="background-color: #FFD700"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#FF69B4');" style="background-color: #FF69B4"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#FFB6C1');" style="background-color: #FFB6C1"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#7B68EE');" style="background-color: #7B68EE"></a>
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#D2B48C');" style="background-color: #D2B48C"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#D2B48C');" style="background-color: #D2B48C"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col md">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#9ACD32');" style="background-color: #9ACD32"></a>
+                    </div>
+                    <div class="mdl-cell mdl-cell--1-col">
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="changeBackgroundColor('#00FFFF');" style="background-color: #00FFFF"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            if (typeof(localStorage) == 'undefined') {
+                alert('Your browser does not support HTML5 localStorage. Try upgrading.');
+            } else {
+                if (localStorage.getItem("background") != null) {
+                    getColour = localStorage.background;
+                    $('#barre_de_navigation').css('background', getColour);
+                    $('#barre_couleur').css('background', getColour);
+                }
+            }
+
+            if (typeof(localStorage) == 'undefined') {
+                alert('Your browser does not support HTML5 localStorage. Try upgrading.');
+            } else {
+                if (localStorage.getItem("modeNuit") != null) {
+                    getColour = localStorage.background;
+                    $('#barre_de_navigation').css('background', getColour);
+                    $('#barre_couleur').css('background', getColour);
+                }
+            }
+        });
+        // change couleur
+        var dialoges = document.querySelector('.changecouleur');
+        var showModalcouleur = document.querySelector('.couleur');
+        if (!dialoges.showModal) {
+            dialogPolyfill.registerDialog(dialoges);
+        }
+        showModalcouleur.addEventListener('click', function() {
+            dialoges.showModal();
+        });
+        dialoges.querySelector('.closess').addEventListener('click', function() {
+            dialoges.close();
+        });
+    </script>
+
+</div>

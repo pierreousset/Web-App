@@ -1,0 +1,54 @@
+<!-- views/home/footer.ejs -->
+<style>
+    #foot {
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    #add {
+        display: block;
+        margin: auto;
+    }
+
+    #show_para {
+        display: block;
+        margin: auto;
+    }
+</style>
+<footer id="foot">
+    <a href="#">
+        <button id="add" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored ajout">
+            <i class="material-icons">add</i>
+        </button>
+    </a>
+
+    <dialog class="mdl-dialog mdl_2" id="dialoge">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab buttonnn closes">
+                    <i class="material-icons">close</i>
+                </button>
+        <div class="mdl-dialog__content">
+            <h3>
+                Ajout
+            </h3>
+        </div>
+        <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+            <form action="">
+                <div class="mdl-textfield mdl-js-textfield" style="margin: auto">
+                    <input class="mdl-textfield__input" type="textarea" id="fname">
+                    <label class="mdl-textfield__label" for="fname" name="email">Ajouter une tâche à ""...</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield" style="margin: auto">
+
+                </div>
+                <div class="divajout">
+                    <button class="mdl-button">
+                        <i class="material-icons boutonannu">date_range</i>
+                    </button>
+                    <button type="submit" class="mdl-button boutonannu closes">Annuler</button>
+                    <button type="submit" class="mdl-button boutonplu">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+</footer>

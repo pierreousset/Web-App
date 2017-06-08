@@ -1,0 +1,49 @@
+<!-- views/home/note.ejs -->
+<style>
+.demo-list-three {
+  width: 700px;
+}
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .demo-list-three {
+    width: 400px;
+    margin-top: 1cm;
+  }
+}
+</style>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
+  <%
+  if(typeof tasks != 'undefined'){
+  tasks.forEach(function(ind){
+  console.log('/remove/'+ind.id);
+  %>
+    
+    <ul class="demo-list-three mdl-list">
+      <li class="mdl-list__item mdl-list__item--three-line">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-avatar">bookmark</i>
+          <!--<span style="color: white;">20/12/2012</span>-->
+          <span class="mdl-list__item-text-body" style="color: white;">
+          <%= ind.tache %>
+          </span>
+        </span>
+        <span class="mdl-list__item-secondary-content">
+        <form method="post" action=<%= '/remove/'+ind.id %>>
+          <button type="submit" ><i class="material-icons">highlight_off</i></button>
+        </form>
+          <!--<a class="mdl-list__item-secondary-action" href=""><i class="material-icons">highlight_off</i></a>-->
+        </span>
+      </li>
+
+    </ul> 
+  <%
+  })}
+  else{
+  %>
+    <h4>PAS DE TACHES A FAIRE</h4>
+  <%
+  }
+  %>
+  </div>
+
+</div>
